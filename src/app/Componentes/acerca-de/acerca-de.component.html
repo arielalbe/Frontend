@@ -1,0 +1,44 @@
+   <!-- Presentacion -->
+ 
+<div  id="box" class="container border border-white rounded-3" >
+     <div class="row" style="padding:0px " >
+ 
+         <div class="col-12" style="margin:0px">  
+           <img src="https://thumbs.dreamstime.com/b/banner-de-programaci%C3%B3n-web-concepto-tecnolog%C3%ADa-conexiones-personas-negocios-internet-medios-mixtos-219287770.jpg"  class ="img-fluid"  > 
+         </div>
+ 
+     </div>
+   
+     <div class="row" style="padding: 18px;">
+ 
+       <div class="col-xs-12 col-md-4" > <!-- Foto -->
+         <img class="foto img-fluid" id="fotoperfil" src="{{persona.img}}" width="290px" height="290px" >  
+         
+       </div>
+       
+       <div class="col-xs-12 col-md-8">   <!-- Datos personales -->
+         <h1 style="color:rgb(3, 3, 3);"> <b> {{persona.nombre}} {{persona.apellido}}</b></h1><br>
+         <h2 style="color:rgb(3, 3, 3);"> DESARROLLADOR FULL STACK</h2> 
+         <h2 style="color:rgb(5, 5, 5);"> DISEÑADOR SUPERIOR EN COMUNICACION VISUAL</h2> 
+         <h2 style="color:rgb(5, 5, 5);"> FOTOGRAFO PROFESIONAL</h2> 
+       </div>
+       <div class="col-lg-9">              </div>
+       <div class="col-lg-3">
+        <button type="button" class="btn btn-dark" routerLink="/editacercade/1"  *ngIf="isLogged"> Editar persona
+        </button>
+
+      </div>
+</div> 
+</div> 
+
+<div  id="box" class="container border border-white rounded-3" >
+
+       <div id="sobremi" class="row " > <!-- ACERCA DE MI -->
+ 
+        <h1 id="titulo">ACERCA DE MI</h1> 
+        <p>{{persona.descripcion}}</p>
+
+       </div>
+
+</div>
+       

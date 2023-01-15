@@ -1,0 +1,46 @@
+<div id="box" class="container border border-white rounded-3">
+    <div class="row border border-success border-5 rounded-pill">
+        <div class="col-lg-9">
+            <h1>EXPERIENCIA LABORAL</h1>
+        </div>
+        <div class="col-lg-3">
+            <button type="button" class="btn btn-dark" routerLink="/nuevaexp" *ngIf="isLogged"> Nueva Experiencia
+            </button>
+
+        </div>
+    </div>
+
+
+
+<div *ngFor="let Experiencia of expe">
+    <ul style="list-style-type:none">
+        <li>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-2 col-sm-12" style="text-align:center ;">
+                        <img class="foto img-fluid"
+                            src="{{Experiencia.imgE}}"
+                            alt="" class="img-fluid">
+                    </div>
+
+                    <div class="col-7">
+                        <h1> {{Experiencia.nombreE}}</h1>
+                        <h3>Desde <time>{{Experiencia.desdeE}}</time> - Hasta <time>{{Experiencia.hastaE}}</time></h3>
+                        <h3>{{Experiencia.descripcionE}}</h3>
+
+                    </div>
+                    <div class="col-3">
+                        <td> <button class="btn btn-light" routerLink="/editexp/{{Experiencia.id}}" *ngIf="isLogged">
+                            <i class="bi bi-pencil-fill"> Editar </i> </button>
+                    </td>
+                    <td> <button class="btn btn-danger" (click)="delete(Experiencia.id)" *ngIf="isLogged">
+                        <i class="bi bi-x-circle-fill"> Borrar </i> </button> </td>
+
+                    </div>
+
+                </div>
+            </div>
+        </li>
+    </ul >
+</div >
+

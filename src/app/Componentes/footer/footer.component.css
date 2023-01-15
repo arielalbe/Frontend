@@ -1,0 +1,18 @@
+div{
+    padding: 15px;
+    }
+
+row{
+    background-color: rgba(223, 236, 238, 0.904);
+    }
+
+footer{
+    font-size: 20px;
+    text-align: center;
+    background-color: rgba(223, 236, 238, 0.904); 
+}
+
+div {
+    margin-top: 20px;
+    background-color: rgba(223, 236, 238, 0.904);
+}

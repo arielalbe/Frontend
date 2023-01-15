@@ -1,0 +1,45 @@
+<div id="box" class="container border border-white rounded-3">
+    <div class="row border border-success border-5 rounded-pill">
+        <div class="col-lg-9">
+            <h1>EDUCACION</h1>
+        </div>
+        <div class="col-lg-3">
+            <button type="button" class="btn btn-dark" routerLink="/nuevaedu"  *ngIf="isLogged"> Agregar Educacion
+            </button>
+
+        </div>
+    </div>
+
+
+
+<div *ngFor="let Educacion of educacion">
+    <ul style="list-style-type:none">
+        <li>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-2 col-sm-12" style="text-align:center ;">
+                        <img class="foto img-fluid"
+                            src="{{Educacion.imgE}}"
+                            alt="" class="img-fluid">
+                    </div>
+
+                    <div class="col-7">
+                        <h1> {{Educacion.nombreE}}</h1>
+                        <h3>Desde <time>{{Educacion.desdeE}}</time> - Hasta <time>{{Educacion.hastaE}}</time></h3>
+                        <h3>{{Educacion.descripcionE}}</h3>
+
+                    </div>
+                    <div class="col-3">
+                        <td> <button class="btn btn-light" routerLink="/editedu/{{Educacion.id}} " *ngIf="isLogged">
+                            <i class="bi bi-pencil-fill" > Editar </i> </button>
+                    </td>
+                    <td> <button class="btn btn-danger" (click)="delete(Educacion.id)" *ngIf="isLogged">
+                        <i class="bi bi-x-circle-fill"> Borrar </i> </button> </td>
+
+                    </div>
+
+                </div>
+            </div>
+        </li>
+    </ul >
+</div >

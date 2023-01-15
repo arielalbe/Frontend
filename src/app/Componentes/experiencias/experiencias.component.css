@@ -1,0 +1,22 @@
+div{
+    padding: 15px;
+    
+}
+
+img{
+    border-radius: 22px;
+}
+
+#box {
+    box-shadow: 4px -4px 5px;
+    margin-top: 20px;
+    background-color: rgba(223, 236, 238, 0.904);
+}
+
+p{
+    font-size: 25px;
+}
+
+h1{
+    font-weight: bold;
+}

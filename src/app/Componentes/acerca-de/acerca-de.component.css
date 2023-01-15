@@ -1,0 +1,29 @@
+.row{
+    padding: 20px;
+}
+
+#fotoperfil{
+        border-radius: 100%;
+        box-shadow: 5px 5px 5px rgb(8, 8, 8);
+         }
+
+#titulo{
+font-size: 50px;
+}
+
+p{
+    font-size: 25px;
+}
+
+#box {
+    box-shadow: 4px -4px 5px;
+    margin-top: 20px;
+    background-color: rgba(223, 236, 238, 0.904);
+}
+
+#sobremi{
+    padding: 11px;
+    margin: 11px;
+    background-color: rgba(229, 239, 239, 0.904);
+    box-shadow: 5px 5px 5px ;
+}

@@ -1,0 +1,40 @@
+<div id="box"  class="container border border-white rounded-3" > 
+    <div class="row border border-success border-5 rounded-pill ">
+      <div class="col-lg-9"><h1>APTITUDES </h1> </div>
+      <div class="col-lg-3" ><button type="button" routerLink="/newskill" class="btn btn-dark" *ngIf="isLogged"> Nueva Aptitud</button></div>
+      </div>
+      <div class="row">   
+          <div class="col-md-4 col-sm-12 circulo" *ngFor="let skill of skill">
+              <circle-progress
+              [percent]="(skill.porcentaje)"
+              [radius]="100"
+              [title]="(skill.nombre)"
+              [titleColor]="'#212F3C'"
+              [titleFontSize]="'2em'"
+              [outerStrokeWidth]="16"
+              [innerStrokeWidth]="8"
+              [outerStrokeColor]="'#78C000'"
+              [innerStrokeColor]="'#C7E596'"
+              [animation]="true"
+              [animationDuration]="800"
+              [showUnits]="false"
+              [showSubtitle]="false"
+            >
+          </circle-progress>
+            <div>
+            <td> <button class="btn btn-light" routerLink="/editskill/{{skill.id}}" *ngIf="isLogged">
+                    <i class="bi bi-pencil-fill" >  </i> </button>
+            </td>
+            <td> <button class="btn btn-danger" (click)="delete(skill.id)" *ngIf="isLogged">
+                <i class="bi bi-x-circle-fill" >  </i> </button> 
+            </td>
+          </div>
+           
+
+          </div>
+  
+
+  
+  
+
+</div>

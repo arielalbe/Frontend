@@ -1,0 +1,25 @@
+div{
+    background-color: darkslategrey;
+}
+
+#logoap{
+    width: 150px;
+
+}
+
+img{
+    width: 50px;
+}
+
+#redessociales{
+    text-align: center;
+    align-items: center;
+}
+
+a{
+    margin: 6px;
+}
+
+button{
+    margin: 8px;
+}

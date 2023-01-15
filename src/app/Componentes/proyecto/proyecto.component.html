@@ -1,0 +1,45 @@
+<div id="box" class="container border border-white rounded-3">
+    <div class="row border border-success border-5 rounded-pill">
+        <div class="col-lg-9">
+            <h1>Proyectos</h1>
+        </div>
+        <div class="col-lg-3">
+            <button type="button" class="btn btn-dark" routerLink="/nuevopro" *ngIf="isLogged"> Agregar Proyecto
+            </button>
+
+        </div>
+    </div>
+
+
+
+<div *ngFor="let Proyecto of proyecto">
+    <ul style="list-style-type:none">
+        <li>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-sm-12" style="text-align:center ;">
+                        <img class="foto img-fluid"
+                            src="{{Proyecto.imgE}}"
+                            alt="" class="img-fluid">
+                    </div>
+
+                    <div class="col-6">
+                        <h1> {{Proyecto.nombreE}}</h1>
+                        <h3>Desde <time>{{Proyecto.desdeE}}</time> - Hasta <time>{{Proyecto.hastaE}}</time></h3>
+                        <h3>{{Proyecto.descripcionE}}</h3>
+
+                    </div>
+                    <div class="col-3">
+                        <td> <button class="btn btn-light" routerLink="/editpro/{{Proyecto.id}}" *ngIf="isLogged">
+                            <i class="bi bi-pencil-fill" > Editar </i> </button>
+                    </td>
+                    <td> <button class="btn btn-danger" (click)="delete(Proyecto.id)" *ngIf="isLogged">
+                        <i class="bi bi-x-circle-fill" > Borrar </i> </button> </td>
+
+                    </div>
+
+                </div>
+            </div>
+        </li>
+    </ul >
+</div >
